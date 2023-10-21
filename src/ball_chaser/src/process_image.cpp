@@ -39,7 +39,7 @@ void process_image_callback(const sensor_msgs::Image img)
 
 	for(int i = 0; white_pixel_col == -1 && i < rows; i++)
 	{
-		for(int j = 0; j < cols; j++)
+		for(int j = 0; j < cols; j+=3)
 		{
 			red = img.data[i * img.step + j];
 			green = img.data[i * img.step + j + 1];
